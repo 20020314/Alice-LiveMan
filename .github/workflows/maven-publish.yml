@@ -6,7 +6,11 @@ name: Maven Package
 on:
   release:
     types: [created]
-    workflow_dispatch:
+on:
+  push:
+    branches:
+    - main
+    - release/*
 
 jobs:
   build:
